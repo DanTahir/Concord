@@ -3,11 +3,33 @@
 // For simplicity of teaching, we're manually defining these types.
 // However, these types are generated automatically if you're using an ORM such as Prisma.
 export type User = {
-  id: string;
-  name: string;
+  userid: string;
+  username: string;
+  displayname: string;
   email: string;
-  password: string;
+  hashedpassword: string;
+  usergroupid: string;
 };
+
+export type UserAndUserGroup = {
+  userid: string;
+  username: string;
+  displayname: string;
+  email: string;
+  hashedpassword: string;
+  usergroupid: string;
+  usergroupname: string;
+  joinpublicservers: boolean;
+  joinprivateservers: boolean;
+  createpublicservers: boolean;
+  createprivateservers: boolean;
+  addfriends: boolean;
+  sendmessages: boolean;
+  usevoice: boolean;
+  useadmin: boolean;
+  defaultgroup: boolean;
+}
+
 
 export type Customer = {
   id: string;
